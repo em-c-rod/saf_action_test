@@ -7,6 +7,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Convert ASFF
-        uses: mitre/saf_action@main
+        uses: em-c-rod/saf_action_test@master
         with:
-          command_string: 'saf convert:asff2hdf -i asff_sample.json -o asff_sample_hdf.json'
+          command_string: 'convert:asff2hdf -i asff_sample.json -o asff_sample_hdf.json'

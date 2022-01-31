@@ -2,6 +2,7 @@
 
 set -e
 
+echo "Hello, World"
 if [ -n "$INPUT_COMMAND_STRING" ]; then
   echo "Using $(saf version)"
   saf $INPUT_COMMAND_STRING
