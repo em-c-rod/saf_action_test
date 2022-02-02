@@ -1,0 +1,27 @@
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Archive Release Zip
+        uses: thedoctor0/zip-release@master
+        with:
+          type: 'zip'
+          filename: 'source_code.zip'
+          exclusions: '*.git*'
+      - name: Archive Release Tar
+        uses: thedoctor0/zip-release@master
+        with:
+          type: 'tar'
+          filename: 'source_code.tar.gz'
+          exclusions: '*.git*'
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            source_code.zip
+            source_code.tar.gz
