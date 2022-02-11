@@ -7,9 +7,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Convert Burpsuite
-        uses: mitre/saf_action@main
+        uses: em-c-rod/saf_action_test@master
         with:
-          command_string: 'convert:burpsuite2hdf -i sample/burpsuite_sample.min -o burpsuite_hdf.json'
+          command_string: 'saf convert:burpsuite2hdf -i sample/burpsuite_sample.min -o burpsuite_hdf.json'
       # - name: Artifacts
       #   uses: actions/upload-artifact@v1
       #   if: success()
