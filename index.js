@@ -7,7 +7,7 @@ const { exec } = require("child_process");
 console.log(__dirname);
 console.log(process.cwd());
 // "PATH=$(npm bin):$PATH "
-saf(command_string.split(" "));
+saf.run(command_string.split(" "));
 // exec("node_modules/bin " + "saf " + command_string, (error, stdout, stderr) => {
 //     if (error) {
 //         console.log(`error: ${error.message}`);
