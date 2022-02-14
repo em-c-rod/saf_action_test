@@ -4,6 +4,8 @@ const saf = require('@mitre/saf');
 const command_string = core.getInput('command_string');
 
 const { exec } = require("child_process");
+console.log(__dirname);
+console.log(process.cwd());
 exec("PATH=$(npm bin):$PATH " + "saf " + command_string, (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
