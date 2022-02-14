@@ -6,15 +6,16 @@ const command_string = core.getInput('command_string');
 const { exec } = require("child_process");
 console.log(__dirname);
 console.log(process.cwd());
-console.log("PATH=$(npm bin):$PATH ");
-exec("node_modules/bin " + "saf " + command_string, (error, stdout, stderr) => {
-    if (error) {
-        console.log(`error: ${error.message}`);
-        return;
-    }
-    if (stderr) {
-        console.log(stderr);
-        return;
-    }
-    console.log(stdout);
-});
+// "PATH=$(npm bin):$PATH "
+saf(command_string.split(" "));
+// exec("node_modules/bin " + "saf " + command_string, (error, stdout, stderr) => {
+//     if (error) {
+//         console.log(`error: ${error.message}`);
+//         return;
+//     }
+//     if (stderr) {
+//         console.log(stderr);
+//         return;
+//     }
+//     console.log(stdout);
+// });

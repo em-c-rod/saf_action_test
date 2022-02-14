@@ -10,10 +10,10 @@ jobs:
       #   uses: jakejarvis/wait-action@master
       #   with:
       #     time: '1s'
-      # - name: Convert ASFF
-      #   uses: em-c-rod/saf_action_test@master
-      #   with:
-      #     command_string: '--version'
+      - name: Convert ASFF
+        uses: em-c-rod/saf_action_test@master
+        with:
+          command_string: 'saf convert:asff2hdf -i sample/asff_sample.json -o asf_hdf.json'
       # - name: Artifacts
       #   uses: actions/upload-artifact@v1
       #   if: success()
