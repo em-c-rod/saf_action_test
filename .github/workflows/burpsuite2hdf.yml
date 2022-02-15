@@ -10,6 +10,10 @@ jobs:
         uses: em-c-rod/saf_action_test@master
         with:
           command_string: 'convert:burpsuite2hdf -i sample/burpsuite_sample.min -o burpsuite_hdf.json'
+      - name: Test view heimdall
+        uses: em-c-rod/saf_action_test@master
+        with:
+          command_string: 'view:heimdall -i sample/burpsuite_sample.min -o burpsuite_hdf.json'
       - name: Artifacts
         uses: actions/upload-artifact@v1
         if: success()
