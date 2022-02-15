@@ -4,7 +4,7 @@ const saf = require('@mitre/saf');
 try {
     const command_string = core.getInput('command_string');
 } catch(error) {
-    console.log("SAF CLI Command String argument is required.");
+    console.error("SAF CLI Command String argument is required.");
 }
 
 if(command_string.split(" ")[0] == "view:heimdall") {
