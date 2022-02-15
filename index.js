@@ -8,5 +8,5 @@ try {
     }
     saf.run(command_string.split(" "));
 } catch(error) {
-    throw new Error("SAF CLI Command String argument is required.");
+    console.error("SAF CLI Command String argument is required.");
 }
