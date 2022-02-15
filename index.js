@@ -3,12 +3,10 @@ const saf = require('@mitre/saf');
 
 try {
     const command_string = core.getInput('command_string');
+    if(command_string.split(" ")[0] == "view:heimdall") {
+        console.error("The SAF Action does not support the 'view:heimdall' command. Please reference the documentation for other uses.")
+    }
+    saf.run(command_string.split(" "));
 } catch(error) {
     console.error("SAF CLI Command String argument is required.");
 }
-
-if(command_string.split(" ")[0] == "view:heimdall") {
-    console.error("The SAF Action does not support the 'view:heimdall' command. Please reference the documentation for other uses.")
-}
-
-saf.run(command_string.split(" "));
