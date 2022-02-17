@@ -7,11 +7,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Convert Burpsuite
-        uses: em-c-rod/saf_action_test@master
+        uses: em-c-rod/saf_action_test@v15
         with:
           command_string: 'convert:burpsuite2hdf -i sample/burpsuite_sample.min -o burpsuite_hdf.json'
       - name: Test view heimdall
-        uses: em-c-rod/saf_action_test@master
+        uses: em-c-rod/saf_action_test@v15
         with:
           command_string: 'convert:burpsuite2hdf -i sample/burpsuite_sample.min -o burpsuite_hdf.json'
       - name: Artifacts
