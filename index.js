@@ -1,5 +1,5 @@
 const core = require('@actions/core');
-const saf = require('https://github.com/mitre/saf/blob/main/src/index.ts');
+const saf = require('@mitre/saf');
 
 const command_string = core.getInput('command_string');
 if(!command_string) {
