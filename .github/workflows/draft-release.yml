@@ -14,6 +14,10 @@ jobs:
       - name: Build Node Modules
         run: |
           npm ci
+      - name: PWD
+        run: |
+          pwd
+          ls
       - name: Get Release Notes
         run: |
           echo "$(git tag -l --sort=taggerdate --format="%(contents:subject)" | tail -n 1)" > RELEASE_NOTES
@@ -23,4 +27,4 @@ jobs:
         with:
           body_path: RELEASE_NOTES
           draft: true
-          files: node_modules/*
+          files: ./node_modules
