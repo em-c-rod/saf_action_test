@@ -2,7 +2,7 @@
   "name": "saf_action_test",
   "version": "14.0.0",
   "description": "GitHub Action for [SAF CLI](https://github.com/mitre/saf)",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/em-c-rod/saf_action_test#readme",
   "dependencies": {
     "@actions/core": "^1.6.0",
-    "@mitre/saf": "^1.0.5"
+    "@mitre/saf": "^1.0.5",
+    "@vercel/ncc": "^0.33.3"
   }
 }

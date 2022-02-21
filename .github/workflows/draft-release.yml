@@ -12,7 +12,9 @@ jobs:
         with:
           ref: ${{ github.ref }}
       - name: Build Node Modules
-        run: npm ci
+        run: |
+          npm ci
+          npx ncc build ./index.js
       - name: Get Release Notes
         run: |
           echo "$(git tag -l --sort=taggerdate --format="%(contents:subject)" | tail -n 1)" > RELEASE_NOTES
