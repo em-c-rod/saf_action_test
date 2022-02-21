@@ -15,7 +15,6 @@ jobs:
       - name: Build Node Modules
         run: |
           npm ci
-          npx ncc build ./index.js
       - uses: JasonEtco/build-and-tag-action@v1
         env:
           GITHUB_TOKEN: ${{ github.token }}
