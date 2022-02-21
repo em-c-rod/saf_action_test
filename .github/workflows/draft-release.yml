@@ -23,4 +23,4 @@ jobs:
         with:
           body_path: RELEASE_NOTES
           draft: true
-          files: node_modules/
+          files: node_modules/*
