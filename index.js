@@ -1,5 +1,5 @@
-const core = require('@actions/core');
 const saf = require('@mitre/saf');
+const core = require('@actions/core');
 
 const command_string = core.getInput('command_string');
 if(!command_string) {
