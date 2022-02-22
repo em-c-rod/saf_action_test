@@ -11,7 +11,7 @@ jobs:
         with:
           command_string: 'convert:burpsuite2hdf -i sample/burpsuite_sample.min -o burpsuite_hdf.json'
       - name: Test view heimdall
-        uses: em-c-rod/saf_action_test@v15.6.18
+        uses: em-c-rod/saf_action_test@v15.6.19
         with:
           command_string: 'convert:burpsuite2hdf -i sample/burpsuite_sample.min -o burpsuite_hdf.json'
       - name: Artifacts
