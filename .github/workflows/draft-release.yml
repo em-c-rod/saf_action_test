@@ -11,8 +11,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ github.ref }}
-      - name: Install Dependencies
-        run: npm ci && npm run build
       - name: Get Release Notes
         run: |
           echo "$(git tag -l --sort=taggerdate --format="%(contents:subject)" | tail -n 1)" > RELEASE_NOTES
