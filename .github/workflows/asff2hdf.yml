@@ -11,7 +11,7 @@ jobs:
       #   with:
       #     time: '1s'
       - name: Convert ASFF
-        uses: em-c-rod/saf_action_test@v15
+        uses: em-c-rod/saf_action_test@master
       # - name: Artifacts
       #   uses: actions/upload-artifact@v1
       #   if: success()
