@@ -11,7 +11,7 @@ jobs:
       #   with:
       #     time: '1s'
       - name: Convert ASFF
-        uses: em-c-rod/saf_action_test@master
+        uses: em-c-rod/saf_action_test@v15
         with:
           command_string: 'convert:asff2hdf -i sample/asff_sample.json -o asff_hdf.json'
       # - name: Artifacts

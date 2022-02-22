@@ -1,7 +1,7 @@
 const core = require('@actions/core');
 const saf = require('@mitre/saf');
 
-const command_string = core.getInput('command_string');
+const command_string = core.getInput('command_string') || process.env.COMMAND_STRING || "--help";
 if(!command_string) {
     throw new Error("SAF CLI Command String argument is required.");
 }
