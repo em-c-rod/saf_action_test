@@ -12,6 +12,13 @@ jobs:
     if: github.event.pull_request.user.login == 'dependabot[bot]' && contains(github.event.pull_request.labels.*.name, 'dependencies')
     runs-on: ubuntu-20.04
     steps:
+    - name: Rebuild dependencies
+      run: |
+        gh pr checkout ${{github.event.pull_request.number}}
+        npm ci
+        git add node_modules/*
+        git commit
+        git push
     - uses: hmarr/auto-approve-action@v2
       with:
         github-token: "${{ secrets.GITHUB_TOKEN }}"
