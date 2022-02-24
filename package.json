@@ -20,6 +20,6 @@
   "homepage": "https://github.com/em-c-rod/saf_action_test#readme",
   "dependencies": {
     "@actions/core": "^1.5.0",
-    "@mitre/saf": "^1.0.4"
+    "@mitre/saf": "^1.0.5"
   }
 }
