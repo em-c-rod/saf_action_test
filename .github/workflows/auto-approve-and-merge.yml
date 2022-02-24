@@ -18,18 +18,17 @@ jobs:
         ref: ${{ github.event.pull_request.head.ref }}
         # fetch-depth: 0
     - name: Create local changes
-      run: |
-        npm ci
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        git add .
-        git commit -m "generated node modules"
-        git push origin HEAD:refs/heads/${{ github.event.pull_request.head.ref }}
-    # - name: Commit & Push Changes
-    #   uses: actions-js/push@v1.3
-    #   with:
-    #     github_token: ${{secrets.GITHUB_TOKEN}}
-    #     branch: 'refs/heads/${{ github.event.pull_request.head.sha }}'
+      run: npm ci
+        # git config user.name github-actions
+        # git config user.email github-actions@github.com
+        # git add .
+        # git commit -m "generated node modules"
+        # git push origin HEAD:refs/heads/${{ github.event.pull_request.head.ref }}
+    - name: Commit & Push Changes
+      uses: actions-js/push@v1.3
+      with:
+        github_token: ${{secrets.GITHUB_TOKEN}}
+        branch: 'refs/heads/${{ github.event.pull_request.head.ref }}'
     - uses: hmarr/auto-approve-action@v2
       with:
         github-token: "${{ secrets.GITHUB_TOKEN }}"
