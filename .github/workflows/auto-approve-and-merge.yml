@@ -24,7 +24,7 @@ jobs:
         git config user.email github-actions@github.com
         git add .
         git commit -m "generated node modules"
-        git push
+        git push origin HEAD:refs/heads/${{ github.event.pull_request.head.ref }}
     # - name: Commit & Push Changes
     #   uses: actions-js/push@v1.3
     #   with:
