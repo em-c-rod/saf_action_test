@@ -15,6 +15,7 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v2
       with:
+        ref: ${{ github.event.pull_request.head.sha }}
         fetch-depth: 0
     - name: Create local changes
       run: npm ci
