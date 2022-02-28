@@ -8,7 +8,7 @@ if(!command_string) {
 
 const allowable_commands = ['convert', 'generate', 'harden', 'scan', 'validate', 'view'];
 if(!allowable_commands.includes(command_string.split(':')[0])) {
-    throw new Error("The command string did not include one of the allowable commands: " + allowable_commands.join(' ') + ". Please reference the documentation for more details.");
+    throw new Error("The command string did not include one of the allowable commands: " + allowable_commands.join(', ') + ". Please reference the documentation for more details.");
 }
 
 if(command_string.split(" ")[0] == "view:heimdall") {
