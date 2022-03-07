@@ -11,7 +11,7 @@ jobs:
       #   with:
       #     time: '1s'
       - name: Show Inspec Tools Action Deprecation
-        uses: mitre/inspec_tools_action@deprecateInputs
+        uses: mitre/inspec_tools_action@main
         with:
           thresholdfile: hardened.threshold.yml
           resultsfile: spec/results/ec2_rhel-7_hardened.json
