@@ -14,7 +14,7 @@ jobs:
         uses: mitre/inspec_tools_action@main
         with:
           thresholdfile: hardened.threshold.yml
-          resultsfile: spec/results/ec2_rhel-7_hardened.json
+          resultsfile: ec2_rhel-7_hardened.json
           command: 'compliance'
       - name: Convert ASFF
         uses: em-c-rod/saf_action_test@master
