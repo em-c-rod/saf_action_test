@@ -7,11 +7,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Show Inspec Tools Action Deprecation
-        uses: mitre/inspec_tools_action@deprecateInputs
+        uses: mitre/inspec_tools_action@main
         with:
           thresholdfile: hardened.threshold.yml
           resultsfile: ec2_rhel-7_hardened.json
           command: 'compliance'
+      - name: Show Heimdall Tools Action Deprecation
+        uses: mitre/heimdall_tools_action@deprecateInputs
+        with:
+          file: 'sample/burpsuite_sample.min'
+          converter: 'burpsuite_mapper'
       - name: Convert Burpsuite
         uses: em-c-rod/saf_action_test@master
         with:
