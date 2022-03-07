@@ -10,10 +10,16 @@ jobs:
       #   uses: jakejarvis/wait-action@master
       #   with:
       #     time: '1s'
+      - name: Show Inspec Tools Action Deprecation
+        uses: mitre/inspec_tools_action@deprecateInputs
+        with:
+          thresholdfile: hardened.threshold.yml
+          resultsfile: spec/results/ec2_rhel-7_hardened.json
+          command: 'summary'
       - name: Convert ASFF
         uses: em-c-rod/saf_action_test@master
         with:
-          command_string: 'convret:asff2hdf -i sample/asff_sample.json -o asff_hdf.json'
+          command_string: 'convert:asff2hdf -i sample/asff_sample.json -o asff_hdf.json'
       # - name: Artifacts
       #   uses: actions/upload-artifact@v1
       #   if: success()
