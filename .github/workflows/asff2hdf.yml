@@ -13,8 +13,8 @@ jobs:
       - name: Show Inspec Tools Action Deprecation
         uses: mitre/inspec_tools_action@main
         with:
-          thresholdfile: hardened.threshold.yml
-          resultsfile: ec2_rhel-7_hardened.json
+          thresholdfile: spec/hardened.threshold.yml
+          resultsfile: spec/ec2_rhel-7_hardened.json
           command: 'compliance'
       - name: Convert ASFF
         uses: em-c-rod/saf_action_test@master
