@@ -17,6 +17,10 @@ jobs:
       #   with:
       #     file: 'sample/burpsuite_sample.min'
       #     converter: 'burpsuite_mapper'
+      - name: Test view summary on this repo
+        uses: em-c-rod/saf_action_test@master
+        with:
+          command_string: 'view:summary -i test/sample_data/red_hat_good.json'
       - name: Convert Burpsuite
         uses: mitre/saf_action@main
         with:
