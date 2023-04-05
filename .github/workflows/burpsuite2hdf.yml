@@ -18,11 +18,11 @@ jobs:
       #     file: 'sample/burpsuite_sample.min'
       #     converter: 'burpsuite_mapper'
       - name: Convert Burpsuite
-        uses: mitre/saf_action@non-default_location
+        uses: mitre/saf_action@main
         with:
           command_string: 'convert burpsuite2hdf -i sample/burpsuite_sample.min -o burpsuite_hdf.json'
       - name: Test view summary
-        uses: mitre/saf_action@non-default_location
+        uses: mitre/saf_action@main
         with:
           command_string: 'view:summary -i test/sample_data/red_hat_good.json'
       - name: Artifacts
