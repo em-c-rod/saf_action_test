@@ -18,7 +18,7 @@ jobs:
       #     file: 'sample/burpsuite_sample.min'
       #     converter: 'burpsuite_mapper'
       - name: Convert Burpsuite
-        uses: mitre/saf_action@v1
+        uses: em-c-rod/saf_action_test@main
         with:
           command_string: 'convert burpsuite2hdf -i sample/burpsuite_sample.min -o burpsuite_hdf.json'
       - name: Test view summary
