@@ -1,6 +1,6 @@
 const process = require('process');
 const saf_action =  require('./run_command.js');
-import path from 'path'
+const path = require('path');
   
 // Printing current directory
 console.log("Current working directory: ",
