@@ -1,0 +1,20 @@
+name: Vagrant Testing Matrix
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  my-job:
+    name: Validate my profile
+    # macos-latest no longer has Vagrant. Must use the specified version per documentation.
+    runs-on: macos-12
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Convert Burpsuite
+        uses: em-c-rod/saf_action_test@master
+        with:
+          command_string: 'convert burpsuite2hdf -i sample/burpsuite_sample.min -o burpsuite_hdf.json'
