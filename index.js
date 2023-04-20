@@ -22,4 +22,4 @@ console.log("Entire Environment: ",
           process.env);
 
 // saf_action({safCLIPath: "/home/runner/work/_actions/mitre/saf_action/main/node_modules/@mitre/saf/lib/index.js"});
-saf_action({safCLIPath: path.join(process.env.GITHUB_ACTION_PATH, 'node_modules/@mitre/saf/lib/index.js')});
+saf_action({safCLIPath: path.join(process.env.HOME, 'work/_actions/mitre/saf_action', process.env.GITHUB_REF_NAME, 'node_modules/@mitre/saf/lib/index.js')});
