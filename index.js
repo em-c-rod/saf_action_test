@@ -17,5 +17,9 @@ console.log("Current GITHUB_EVENT_PATH: ",
 console.log("Current GITHUB_ACTION_PATH: ",
           process.env.GITHUB_ACTION_PATH);
 
+
+console.log("Entire Environment: ",
+          process.env);
+
 // saf_action({safCLIPath: "/home/runner/work/_actions/mitre/saf_action/main/node_modules/@mitre/saf/lib/index.js"});
 saf_action({safCLIPath: path.join(process.env.GITHUB_ACTION_PATH, 'node_modules/@mitre/saf/lib/index.js')});
