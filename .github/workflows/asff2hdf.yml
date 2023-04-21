@@ -16,10 +16,10 @@ jobs:
       #     thresholdfile: spec/hardened.threshold.yml
       #     resultsfile: spec/ec2_rhel-7_hardened.json
       #     command: 'compliance'
-      # - name: Convert ASFF
-      #   uses: em-c-rod/saf_action_test@master
-      #   with:
-      #     command_string: 'convert:asff2hdf -i sample/asff_sample.json -o asff_hdf.json'
+      - name: Convert ASFF
+        uses: mitre/saf_action@v1
+        with:
+          command_string: 'convert:asff2hdf -i sample/asff_sample.json -o asff_hdf.json'
       # - name: Artifacts
       #   uses: actions/upload-artifact@v1
       #   if: success()
