@@ -24,7 +24,7 @@ jobs:
 #       - name: Get GitHub Action Path
 #         run: echo "GITHUB_ACTION_PATH is - ${{ toJSON(github) }}"
       - name: Convert Burpsuite
-        uses: em-c-rod/saf_action_test@master
+        uses: em-c-rod/saf_action@main
         with:
           command_string: 'convert burpsuite2hdf -i sample/burpsuite_sample.min -o burpsuite_hdf.json'
       - name: Test view summary
