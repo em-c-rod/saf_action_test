@@ -16,7 +16,7 @@ jobs:
       #     thresholdfile: spec/hardened.threshold.yml
       #     resultsfile: spec/ec2_rhel-7_hardened.json
       #     command: 'compliance'
-      - name: Convert ASFF
+      - name: Convert ASFF to HDF
         uses: mitre/saf_action@v1
         with:
           command_string: 'convert:asff2hdf -i sample/asff_sample.json -o asff_hdf.json'
